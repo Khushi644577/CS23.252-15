@@ -1,0 +1,58 @@
+import java.util.LinkedList;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author Shanvi and Gyan
+ */
+
+
+
+// USING BYTE STREAM 
+public class Shan11 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+         LinkedList<Integer> list = new LinkedList<>();
+
+        // 1. Insertion at beginning
+        list.addFirst(10);
+        list.addFirst(5);
+
+        // 2. Insertion at end
+        list.addLast(30);
+        list.addLast(40);
+
+        // 3. Insertion at middle (index-based)
+        list.add(2, 20);  // insert at index 2
+
+        System.out.println("List after insertions: " + list);
+
+        // 4. Deletion
+        list.removeFirst();   // remove first element
+        list.removeLast();    // remove last element
+        list.remove(Integer.valueOf(20)); // remove specific element
+
+        System.out.println("List after deletions: " + list);
+        
+        // 5. Searching
+        int key = 30;
+        if (list.contains(key)) {
+            System.out.println(key + " found in the list");
+        } else {
+            System.out.println(key + " not found");
+        }
+
+        // 6. Displaying elements
+        System.out.println("Displaying elements:");
+        for (int num : list) {
+            System.out.println(num);
+        }
+    }
+}
